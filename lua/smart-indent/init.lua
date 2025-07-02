@@ -13,7 +13,7 @@ function M.setup(opts)
       M.detect()
     end,
   })
-  vim.api.nvim_create_autocmd({ "BufNewFile", "BufAdd" }, {
+  vim.api.nvim_create_autocmd("BufNewFile", {
     group = smart_indent_group,
     callback = function(args)
       vim.api.nvim_create_autocmd("BufWritePost", {
